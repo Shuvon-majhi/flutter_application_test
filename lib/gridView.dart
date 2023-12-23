@@ -40,7 +40,6 @@ class _gridviewState extends State<gridview> {
             Icon(Icons.mail),
           ],
         ),
-        
         body: Column(
           children: [
             Expanded(
@@ -52,36 +51,37 @@ class _gridviewState extends State<gridview> {
               ),
             ),
             Expanded(
-                flex: 2,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 4),
-                      itemCount: my.length,
-                      itemBuilder: ((context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(6.0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(14),
-                            child: Container(
-                              color: Colors.green[400],
-                              child: Center(
-                                child: Text(
-                                  my[index],
-                                  style: TextStyle(
-                                      color: Colors.red, fontSize: 20),
-                                ),
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 4),
+                    itemCount: my.length,
+                    itemBuilder: ((context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(14),
+                          child: Container(
+                            color: Colors.green[400],
+                            child: Center(
+                              child: Text(
+                                my[index],
+                                style:
+                                    TextStyle(color: Colors.red, fontSize: 20),
                               ),
                             ),
                           ),
-                        );
-                      }),
-                    ),
+                        ),
+                      );
+                    }),
                   ),
-                )),
+                ),
+              ),
+            ),
           ],
         ),
       ),

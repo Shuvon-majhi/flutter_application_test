@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class Button extends StatelessWidget {
   const Button({super.key});
 
@@ -7,8 +8,8 @@ class Button extends StatelessWidget {
 
   //TextEditingController Value = TextEditingController();
 
-  // Snack Bar
-  SnackBarMassage(Message, context) {
+  //Snack Bar
+  SnackBarMessage(Message, context) {
     return ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
@@ -43,7 +44,7 @@ class Button extends StatelessWidget {
 
               ElevatedButton(
                 onPressed: () {
-                  SnackBarMassage("Elevated Button", context);
+                  SnackBarMessage("Elevated Button", context);
                 },
                 child: Text('Press me'),
                 style: ElevatedButton.styleFrom(
@@ -69,7 +70,7 @@ class Button extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      SnackBarMassage('Welcome to Text button', context);
+                      SnackBarMessage('Welcome to Text button', context);
                     },
                     child: Text('Text Button'),
                     style: TextButton.styleFrom(
@@ -83,7 +84,7 @@ class Button extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      SnackBarMassage('Welcome to Text button', context);
+                      SnackBarMessage('Welcome to Text button', context);
                     },
                     child: Text('Text Button'),
                     style: TextButton.styleFrom(
@@ -102,7 +103,7 @@ class Button extends StatelessWidget {
 
               IconButton(
                 onPressed: () {
-                  SnackBarMassage("Icon Button", context);
+                  SnackBarMessage("Icon Button", context);
                 },
                 icon: Icon(Icons.reddit_outlined),
               ),
@@ -118,7 +119,7 @@ class Button extends StatelessWidget {
                 // },
 
                 onSubmitted: (value) {
-                  SnackBarMassage('info submitted Successfuly', context);
+                  SnackBarMessage('info submitted Successfuly', context);
                 },
 
                 textInputAction: TextInputAction.done,
@@ -158,7 +159,7 @@ class Button extends StatelessWidget {
                 // },
 
                 onSubmitted: (value) {
-                  SnackBarMassage('information submitted Successfuly', context);
+                  SnackBarMessage('information submitted Successfuly', context);
                 },
 
                 textInputAction: TextInputAction.done,
@@ -194,7 +195,7 @@ class Button extends StatelessWidget {
               // Container and GestureDetector
               GestureDetector(
                 onTap: () {
-                  SnackBarMassage("Gesture Detector", context);
+                  SnackBarMessage("Gesture Detector", context);
                 },
                 child: Container(
                   padding: EdgeInsets.all(50),
@@ -231,7 +232,7 @@ class Button extends StatelessWidget {
               // InkWell button
               InkWell(
                 onTap: () {
-                  SnackBarMassage('InkWell Button', context);
+                  SnackBarMessage('InkWell Button', context);
                 },
                 child: Text("InkWell Button"),
                 splashColor: Colors.red,
